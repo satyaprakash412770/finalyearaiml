@@ -3,202 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Hanuman Temple</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shree Sai Shraddha Electricals</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
         }
+
+        /* Header */
         header {
-            background-color: #ffcc00;
-            color: #800000;
-            text-align: center;
-            padding: 20px 0;
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
         }
-        nav {
-            background-color: #800000;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
             margin: 0 15px;
         }
-        main {
-            padding: 20px;
-            background-color: #ffffff;
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            color: #800000;
-        }
-        footer {
-            background-color: #800000;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border: 2px solid #800000;
-            margin-bottom: 10px;
-            display: none; /* Hide all images by default */
-        }
-        .contact-info {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact-info li {
-            margin-bottom: 10px;
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
+
+        /* Hero Section */
+        .hero {
+            background-image: url('your-image.jpg'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
-        }
-        .popup-content {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
             text-align: center;
         }
-        .popup-content button {
-            background-color: #800000;
-            color: #ffffff;
-            border: none;
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 24px;
+        }
+
+        .hero .cta-button {
+            background-color: #ff6600;
+            color: #fff;
             padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
+            border: none;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Key Services */
+        .key-services {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .key-services h2 {
+            margin-bottom: 20px;
+        }
+
+        .key-services .service-icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-icons div {
+            flex: 1 1 200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            margin-bottom: 20px;
+        }
+
+        .why-choose-us ul {
+            list-style: none;
+        }
+
+        .why-choose-us ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        /* Contact Us */
+        .contact-form {
+            padding: 50px 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Shri Hanuman Temple</h1>
+        <nav>
+            <div class="logo">
+                <h1>Shree Sai Shraddha Electricals</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#activities">Daily Activities</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Professional Electrical Contractors You Can Trust</h1>
+        <p>Providing Reliable Electrical Solutions for Residential, Commercial, and Industrial Projects</p>
+        <a href="#contact" class="cta-button">Get a Quote</a>
+    </section>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About the Temple</h2>
-            <p>Welcome to the Shri Hanuman Temple, a sacred place of worship dedicated to Lord Hanuman, the epitome of devotion, strength, and perseverance. Our temple has been serving the community for over 50 years, offering a serene environment for prayer, meditation, and spiritual growth.</p>
-        </section>
-
-        <section id="activities" class="section">
-            <h2>Daily Activities</h2>
-            <ul>
-                <li><strong>Morning Aarti:</strong> 6:00 AM</li>
-                <li><strong>Bhajan & Kirtan:</strong> 7:00 AM - 8:00 AM</li>
-                <li><strong>Evening Aarti:</strong> 6:00 PM</li>
-                <li><strong>Satsang:</strong> Every Saturday, 7:00 PM</li>
-            </ul>
-        </section>
-
-        <section id="gallery" class="section">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <img src="hanuman_image1.jpg" alt="Hanuman Image 1">
-                <img src="hanuman_image2.jpg" alt="Hanuman Image 2">
-                <img src="hanuman_image3.jpg" alt="Hanuman Image 3">
+    <!-- Key Services Section -->
+    <section class="key-services" id="services">
+        <h2>Our Key Services</h2>
+        <div class="service-icons">
+            <div>
+                <h3>Residential Solutions</h3>
+                <p>Full home wiring, lighting, and more.</p>
             </div>
-        </section>
+            <div>
+                <h3>Commercial Installations</h3>
+                <p>Power distribution, lighting for businesses.</p>
+            </div>
+            <div>
+                <h3>Industrial Maintenance</h3>
+                <p>Heavy-duty equipment, factory setups.</p>
+            </div>
+            <div>
+                <h3>Safety & Compliance</h3>
+                <p>Electrical safety audits and compliance checks.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <ul class="contact-info">
-                <li><strong>Address:</strong> Shri Hanuman Temple, Main Street, City Name, State, Zip Code</li>
-                <li><strong>Phone:</strong> +123-456-7890</li>
-                <li><strong>Email:</strong> info@hanumantemple.com</li>
-            </ul>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name"><br>
-                <input type="email" id="email" placeholder="Your Email"><br>
-                <textarea id="message" placeholder="Your Message"></textarea><br>
-                <button type="button" onclick="validateForm()">Submit</button>
-            </form>
-        </section>
-    </main>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <ul>
+            <li>Experienced & Certified Team</li>
+            <li>Affordable Pricing</li>
+            <li>Timely Delivery</li>
+            <li>Customer Satisfaction Focus</li>
+        </ul>
+    </section>
 
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Shree Sai Shraddha Electricals was founded with a vision to provide professional electrical services with a focus on quality, safety, and customer satisfaction. Our team of certified electricians is committed to delivering reliable solutions for all types of electrical projects.</p>
+        <h3>Our Core Values</h3>
+        <ul>
+            <li>Professionalism</li>
+            <li>Integrity</li>
+            <li>Safety</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Our Projects</h2>
+        <p>Here are some of the key projects we’ve worked on:</p>
+        <div class="projects-gallery">
+            <p>Apartment Complex Wiring</p>
+            <p>Retail Store Electrical Installation</p>
+            <p>Industrial Plant Maintenance</p>
+            <!-- Add images and more descriptions here -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            "Shree Sai Shraddha Electricals provided excellent service for our new office space. Timely and professional!"
+            – [Client Name]
+        </blockquote>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Phone: +91 XXX-XXX-XXXX</p>
+            <p>Email: info@shreesaishraddhaelectricals.com</p>
+            <p>Address: [Your Office Address]</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shri Hanuman Temple. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Shree Sai Shraddha Electricals. All Rights Reserved.</p>
     </footer>
 
-    <!-- Popup Announcement -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>Special Announcement!</h2>
-            <p>Join us for the Hanuman Jayanti celebration on April 6th at 7 PM!</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for Image Carousel
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('.gallery img');
-        
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.style.display = (i === index) ? 'block' : 'none';
-            });
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            showImage(currentImageIndex);
-        }
-
-        // Initialize the carousel
-        showImage(currentImageIndex);
-        setInterval(nextImage, 3000); // Change image every 3 seconds
-
-        // JavaScript for Popup Announcement
-        function showPopup() {
-            document.getElementById('popup').style.display = 'flex';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        // Show the popup after 3 seconds
-        setTimeout(showPopup, 3000);
-
-        // JavaScript for Contact Form Validation
-        function validateForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            if (name === '' || email === '' || message === '') {
-                alert('Please fill out all fields.');
-            } else {
-                alert('Thank you for contacting us!');
-                document.getElementById('contactForm').reset();
-            }
-        }
-    </script>
 </body>
 </html>
