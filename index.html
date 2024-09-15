@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Hanuman Temple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #ffcc00;
+            color: #800000;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #800000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #800000;
+        }
+        footer {
+            background-color: #800000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #800000;
+            margin-bottom: 10px;
+            display: none; /* Hide all images by default */
+        }
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .popup-content button {
+            background-color: #800000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shri Hanuman Temple</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#activities">Daily Activities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About the Temple</h2>
+            <p>Welcome to the Shri Hanuman Temple, a sacred place of worship dedicated to Lord Hanuman, the epitome of devotion, strength, and perseverance. Our temple has been serving the community for over 50 years, offering a serene environment for prayer, meditation, and spiritual growth.</p>
+        </section>
+
+        <section id="activities" class="section">
+            <h2>Daily Activities</h2>
+            <ul>
+                <li><strong>Morning Aarti:</strong> 6:00 AM</li>
+                <li><strong>Bhajan & Kirtan:</strong> 7:00 AM - 8:00 AM</li>
+                <li><strong>Evening Aarti:</strong> 6:00 PM</li>
+                <li><strong>Satsang:</strong> Every Saturday, 7:00 PM</li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="hanuman_image1.jpg" alt="Hanuman Image 1">
+                <img src="hanuman_image2.jpg" alt="Hanuman Image 2">
+                <img src="hanuman_image3.jpg" alt="Hanuman Image 3">
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <ul class="contact-info">
+                <li><strong>Address:</strong> Shri Hanuman Temple, Main Street, City Name, State, Zip Code</li>
+                <li><strong>Phone:</strong> +123-456-7890</li>
+                <li><strong>Email:</strong> info@hanumantemple.com</li>
+            </ul>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name"><br>
+                <input type="email" id="email" placeholder="Your Email"><br>
+                <textarea id="message" placeholder="Your Message"></textarea><br>
+                <button type="button" onclick="validateForm()">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shri Hanuman Temple. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup Announcement -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Special Announcement!</h2>
+            <p>Join us for the Hanuman Jayanti celebration on April 6th at 7 PM!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Image Carousel
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Initialize the carousel
+        showImage(currentImageIndex);
+        setInterval(nextImage, 3000); // Change image every 3 seconds
+
+        // JavaScript for Popup Announcement
+        function showPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Show the popup after 3 seconds
+        setTimeout(showPopup, 3000);
+
+        // JavaScript for Contact Form Validation
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields.');
+            } else {
+                alert('Thank you for contacting us!');
+                document.getElementById('contactForm').reset();
+            }
+        }
+    </script>
+</body>
+</html>
